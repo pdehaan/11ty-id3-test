@@ -1,0 +1,14 @@
+---
+layout: layouts/base.liquid
+pagination:
+  data: mp3s
+  size: 1
+  alias: mp3
+permalink: "{{ mp3.file | replace: '.mp3', '' }}/"
+eleventyComputed:
+  title: "{{ mp3.file }}"
+---
+
+<h1>{{ mp3.file }}{% if mp3.genre %} ({{ mp3.genre }}){% endif %}</h1>
+
+<pre>{{ mp3 | json }}</pre>
