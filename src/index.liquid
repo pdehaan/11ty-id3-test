@@ -4,7 +4,7 @@ pagination:
   data: mp3s
   size: 1
   alias: mp3
-permalink: "{{ mp3.file | replace: '.mp3', '' }}/"
+permalink: "{{ mp3.artist | slug }}/{{ mp3.album | slug }}/{{ mp3.title | slug }}/"
 eleventyComputed:
   title: "{{ mp3.file }}"
 ---
